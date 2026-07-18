@@ -34,17 +34,17 @@ const es = {
       {
         title: 'Agente Orquestador',
         description:
-          'Planifica, divide tareas y gestiona el contexto global del proyecto. Garantiza que cada agente trabaje hacia un objetivo coherente.',
+          'Planifica, divide tareas y gestiona el contexto global del proyecto.',
       },
       {
         title: 'Agente Constructor',
         description:
-          'Genera, refactoriza y valida código production-ready con estándares estrictos. Cada entrega pasa por revisión automatizada.',
+          'Genera, refactoriza y valida código production-ready con estándares estrictos.',
       },
       {
         title: 'Agente de Razonamiento',
         description:
-          'Valida lógica de negocio, sugiere optimizaciones y asegura coherencia arquitectónica antes de que el código llegue a producción.',
+          'Valida lógica de negocio, sugiere optimizaciones y asegura coherencia arquitectónica.',
       },
     ],
   },
@@ -109,17 +109,17 @@ const en: typeof es = {
       {
         title: 'Orchestrator Agent',
         description:
-          'Plans, splits tasks, and manages the project\'s global context. Ensures every agent works toward a coherent goal.',
+          'Plans, divides tasks, and manages the global project context.',
       },
       {
         title: 'Builder Agent',
         description:
-          'Generates, refactors, and validates production-ready code under strict standards. Every delivery goes through automated review.',
+          'Generates, refactors, and validates production-ready code with strict standards.',
       },
       {
         title: 'Reasoning Agent',
         description:
-          'Validates business logic, suggests optimizations, and ensures architectural coherence before code reaches production.',
+          'Validates business logic, suggests optimizations, and ensures architectural coherence.',
       },
     ],
   },
