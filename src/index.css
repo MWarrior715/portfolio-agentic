@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Tailwind v4: la variante dark: responde a la clase .dark en <html>,
+   no a la media query del SO. Así el toggle de Zustand controla el tema. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Fuentes cargadas vía <link> en index.html (mejor performance que @import) */
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  @apply bg-white text-gray-900 dark:bg-[#0a0a0f] dark:text-gray-50;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+code,
+kbd,
+pre {
+  font-family: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+}
+
+/* Scrollbar personalizada — modo claro */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Scrollbar en modo oscuro */
+.dark ::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
