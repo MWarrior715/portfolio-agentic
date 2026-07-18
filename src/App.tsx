@@ -2,11 +2,11 @@
 import { lazy, Suspense } from 'react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Hero } from '@/components/hero/Hero';
+import { AiFirstEngineering } from '@/components/sections/AiFirstEngineering';
+import { Footer } from '@/components/layout/Footer';
 
-// Code-splitting: secciones bajo el fold se cargan bajo demanda.
-const AiFirstEngineering = lazy(() =>
-  import('@/components/sections/AiFirstEngineering').then((m) => ({ default: m.AiFirstEngineering }))
-);
+// Code-splitting: solo las secciones bajo el fold se cargan bajo demanda.
+// Navbar, Hero, Ingeniería AI-First y Footer quedan sincrónicos (LCP crítico).
 const Projects = lazy(() =>
   import('@/components/sections/Projects').then((m) => ({ default: m.Projects }))
 );
@@ -19,13 +19,15 @@ const Experience = lazy(() =>
 const Contact = lazy(() =>
   import('@/components/sections/Contact').then((m) => ({ default: m.Contact }))
 );
-const Footer = lazy(() =>
-  import('@/components/layout/Footer').then((m) => ({ default: m.Footer }))
-);
 
-/** Placeholder que reserva altura para evitar CLS mientras carga la sección. */
+/** Placeholder con pulse que reserva altura para evitar CLS mientras carga la sección. */
 function SectionFallback() {
-  return <div className="min-h-screen" aria-hidden="true" />;
+  return (
+    <div
+      className="min-h-[400px] animate-pulse rounded-2xl bg-gray-50 dark:bg-gray-900"
+      aria-hidden="true"
+    />
+  );
 }
 
 function App() {
@@ -36,9 +38,7 @@ function App() {
       <main>
         <Hero />
 
-        <Suspense fallback={<SectionFallback />}>
-          <AiFirstEngineering />
-        </Suspense>
+        <AiFirstEngineering />
 
         <Suspense fallback={<SectionFallback />}>
           <Projects />
@@ -56,9 +56,7 @@ function App() {
           <Contact />
         </Suspense>
 
-        <Suspense fallback={null}>
-          <Footer />
-        </Suspense>
+        <Footer />
       </main>
     </div>
   );
