@@ -23,3 +23,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cerebro oculto del orquestador (No subir al repo público)
+CLAUDE.md
+ESTADO.md
+
+# Referencia de datos antiguos (Solo uso local)
+old-portfolio/
