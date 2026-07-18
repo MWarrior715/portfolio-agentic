@@ -24,8 +24,8 @@ export const contactData: Localized<ContactItem[]> = {
     {
       id: 'phone',
       label: 'Teléfono',
-      value: '+57 311 503 2702',
-      href: 'tel:+573115032702',
+      value: '+57 317 014 4140',
+      href: 'tel:+573170144140',
       icon: 'phone',
     },
     {
@@ -67,8 +67,8 @@ export const contactData: Localized<ContactItem[]> = {
     {
       id: 'phone',
       label: 'Phone',
-      value: '+57 311 503 2702',
-      href: 'tel:+573115032702',
+      value: '+57 317 014 4140',
+      href: 'tel:+573170144140',
       icon: 'phone',
     },
     {
