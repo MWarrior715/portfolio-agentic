@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useThemeStore } from '@/store/useThemeStore';

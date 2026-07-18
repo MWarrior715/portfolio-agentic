@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { motion } from 'framer-motion';
 import { type Variants } from 'framer-motion';
 import { Briefcase, GraduationCap, Rocket } from 'lucide-react';

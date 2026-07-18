@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { type Variants } from 'framer-motion';
 
 /** Entrada suave: fade + desplazamiento vertical hacia arriba. */

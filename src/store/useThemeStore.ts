@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 

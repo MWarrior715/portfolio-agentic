@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { motion } from 'framer-motion';
 import { BrainCircuit, Code2, Layers } from 'lucide-react';
 import { fadeInUp, staggerContainer, viewportOnce } from '@/lib/animations';

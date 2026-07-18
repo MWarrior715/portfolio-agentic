@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { motion } from 'framer-motion';
 import { quikliiData } from '@/data/quiklii';
 import { LayerCard } from '@/components/quiklii/LayerCard';

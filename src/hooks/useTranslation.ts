@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { useLanguageStore } from '@/store/useLanguageStore';
 import { translations, type Dictionary } from '@/data/translations';
 

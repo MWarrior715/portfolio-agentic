@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { motion } from 'framer-motion';
 import { experienceData } from '@/data/experience';
 import { TimelineItem } from '@/components/experience/TimelineItem';

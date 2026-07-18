@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { motion } from 'framer-motion';
 import { CodeTypewriter } from './CodeTypewriter';
 import { fadeInRight, fadeInUp, staggerContainer } from '@/lib/animations';

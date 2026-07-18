@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 // Diccionario de UI tipado. `es` es la fuente de verdad; `en: typeof es`
 // garantiza en compile-time que ambos idiomas tienen las mismas claves.
 

@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { GitHubIcon } from '@/components/ui/GitHubIcon';
 
 export function Footer() {

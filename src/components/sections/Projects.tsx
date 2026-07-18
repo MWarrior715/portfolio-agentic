@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { motion } from 'framer-motion';
 import { projectsData } from '@/data/projects';
 import { ProjectCard } from '@/components/projects/ProjectCard';

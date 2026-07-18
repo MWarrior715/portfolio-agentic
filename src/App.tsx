@@ -1,4 +1,4 @@
-// Generado asistido por Claude Code
+// Portafolio agéntico · AI Product Builder
 import { lazy, Suspense } from 'react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Hero } from '@/components/hero/Hero';
