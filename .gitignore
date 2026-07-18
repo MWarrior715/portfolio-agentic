@@ -25,7 +25,7 @@ dist-ssr
 *.sw?
 
 # Cerebro oculto del orquestador (No subir al repo público)
-CLAUDE.md
+AGENT.md
 ESTADO.md
 
 # Referencia de datos antiguos (Solo uso local)
