@@ -50,7 +50,7 @@ const es = {
   },
   projects: {
     title: 'Proyectos',
-    titleAccent: 'en producción',
+    titleAccent: 'AI Product Lab',
     subtitle:
       'Cada caso sigue el mismo formato: problema real, solución arquitectónica, impacto medido y ahorro cuantificado.',
     codeLabel: 'Código',
@@ -125,7 +125,7 @@ const en: typeof es = {
   },
   projects: {
     title: 'Projects',
-    titleAccent: 'in production',
+    titleAccent: 'AI Product Lab',
     subtitle:
       'Every case follows the same format: real problem, architectural solution, measured impact, and quantified savings.',
     codeLabel: 'Code',
