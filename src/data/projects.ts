@@ -59,6 +59,63 @@ export const projectsData: Localized<ProjectData[]> = {
       githubUrl: 'https://github.com/MWarrior715/autonomous-workflow',
       demoUrl: '#',
     },
+    {
+      id: 'ai-booking-engine',
+      title: 'AI Booking Engine',
+      tagline: 'Motor de reservas inteligente, multi-rubro y listo para producción',
+      description:
+        'Motor de reservas con IA conversacional, adaptable a restaurantes, gimnasios, spas, salones, consultorios y coworking. Disponibilidad, conflictos y confirmaciones en tiempo real.',
+      problem:
+        'Las agendas por WhatsApp o teléfono pierden reservas, duplican cupos y no escalan entre locales con flujos distintos.',
+      solution:
+        'Motor de reservas sobre Next.js y PostgreSQL con IA conversacional: gestiona disponibilidad, conflictos de calendario y confirmaciones automáticas, configurable por rubro.',
+      impact:
+        'Reservas 24/7 sin fricción, cero doble-booking y un solo sistema para varios tipos de negocio.',
+      savings: '~70% menos tiempo humano en agenda y cupos',
+      stack: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Prisma', 'TypeScript', 'Socket.io'],
+      metric: '~70% menos gestión manual de reservas',
+      tags: ['IA Conversacional', 'SaaS', 'Multi-rubro'],
+      githubUrl: 'https://github.com/MWarrior715/ai-booking-engine',
+      demoUrl: '#',
+    },
+    {
+      id: 'ai-operations-center',
+      title: 'AI Operations Center',
+      tagline: 'Consola central donde múltiples agentes colaboran en tiempo real',
+      description:
+        'Consola de observabilidad y orquestación de agentes (research, sales, scheduling, customer, coding, reporting) que trabajan simultáneamente sobre un estado compartido.',
+      problem:
+        'Cuando varios agentes operan a la vez, sin un panel único no hay visibilidad ni coordinación: cada uno trabaja a ciegas.',
+      solution:
+        'Construí una consola central con estado compartido y WebSocket que orquesta y muestra agentes colaborativos trabajando simultáneamente, con observabilidad en tiempo real.',
+      impact:
+        'Un solo panel para ver, coordinar y corregir todos los agentes del ecosistema en producción.',
+      savings: 'Decisiones operativas en segundos, no en reuniones de alineación',
+      stack: ['React', 'TypeScript', 'Node.js', 'WebSocket', 'Redis', 'Python', 'LangGraph'],
+      metric: '1 consola · N agentes coordinados en tiempo real',
+      tags: ['Multiagente', 'Observabilidad', 'Tiempo real'],
+      githubUrl: 'https://github.com/MWarrior715/ai-operations-center',
+      demoUrl: '#',
+    },
+    {
+      id: 'multi-agent-crm',
+      title: 'Multi-Agent CRM Assistant',
+      tagline: 'CRM impulsado por agentes que automatizan el flujo comercial completo',
+      description:
+        'CRM con agentes inteligentes: captura de leads, clasificación, resumen, seguimiento, emails, propuestas, historial y tareas, sin intervención manual.',
+      problem:
+        'El seguimiento comercial se hace a mano, los leads se enfrían y el historial se pierde entre WhatsApp, correo y hojas de cálculo.',
+      solution:
+        'CRM con agentes especializados que capturan, clasifican, resumen y hacen seguimiento de leads, generan emails y propuestas, y mantienen historial y tareas unificadas.',
+      impact:
+        'El flujo comercial completo en piloto automático, con contexto centralizado por lead.',
+      savings: '24h → minutos en seguimiento y propuesta comercial',
+      stack: ['React', 'Node.js', 'PostgreSQL', 'Python', 'LangGraph', 'SendGrid', 'TypeScript'],
+      metric: '24h → minutos en seguimiento comercial',
+      tags: ['CRM', 'Agentes IA', 'Automatización comercial'],
+      githubUrl: 'https://github.com/MWarrior715/multi-agent-crm',
+      demoUrl: '#',
+    },
   ],
   en: [
     {
@@ -116,6 +173,63 @@ export const projectsData: Localized<ProjectData[]> = {
       metric: '24h → 2 min response time',
       tags: ['Automation', 'n8n', 'Lead Gen'],
       githubUrl: 'https://github.com/MWarrior715/autonomous-workflow',
+      demoUrl: '#',
+    },
+    {
+      id: 'ai-booking-engine',
+      title: 'AI Booking Engine',
+      tagline: 'Smart, multi-industry booking engine, production-ready',
+      description:
+        'Conversational AI booking engine, adaptable to restaurants, gyms, spas, salons, clinics and coworking. Real-time availability, conflicts and confirmations.',
+      problem:
+        'Booking by WhatsApp or phone loses reservations, double-books slots and does not scale across venues with different flows.',
+      solution:
+        'Booking engine on Next.js and PostgreSQL with conversational AI: handles availability, calendar conflicts and automatic confirmations, configurable per industry.',
+      impact:
+        '24/7 frictionless reservations, zero double-booking and one system for several business types.',
+      savings: '~70% less human time on scheduling and slots',
+      stack: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Prisma', 'TypeScript', 'Socket.io'],
+      metric: '~70% less manual booking management',
+      tags: ['Conversational AI', 'SaaS', 'Multi-industry'],
+      githubUrl: 'https://github.com/MWarrior715/ai-booking-engine',
+      demoUrl: '#',
+    },
+    {
+      id: 'ai-operations-center',
+      title: 'AI Operations Center',
+      tagline: 'Central console where multiple agents collaborate in real time',
+      description:
+        'Observability and orchestration console for agents (research, sales, scheduling, customer, coding, reporting) working simultaneously over shared state.',
+      problem:
+        'When several agents run at once without a single panel, there is no visibility or coordination — each works blind.',
+      solution:
+        'Built a central console with shared state and WebSocket that orchestrates and renders collaborative agents working simultaneously, with real-time observability.',
+      impact:
+        'A single panel to see, coordinate and correct every agent in the production ecosystem.',
+      savings: 'Operational decisions in seconds, not in alignment meetings',
+      stack: ['React', 'TypeScript', 'Node.js', 'WebSocket', 'Redis', 'Python', 'LangGraph'],
+      metric: '1 console · N agents coordinated in real time',
+      tags: ['Multi-agent', 'Observability', 'Real-time'],
+      githubUrl: 'https://github.com/MWarrior715/ai-operations-center',
+      demoUrl: '#',
+    },
+    {
+      id: 'multi-agent-crm',
+      title: 'Multi-Agent CRM Assistant',
+      tagline: 'Agent-driven CRM that automates the full sales flow',
+      description:
+        'CRM with intelligent agents: lead capture, classification, summary, follow-up, emails, proposals, history and tasks, without manual intervention.',
+      problem:
+        'Sales follow-up is manual, leads go cold and history gets lost across WhatsApp, email and spreadsheets.',
+      solution:
+        'CRM with specialized agents that capture, classify, summarize and follow up on leads, generate emails and proposals, and keep unified history and tasks.',
+      impact:
+        'The full sales flow on autopilot, with centralized per-lead context.',
+      savings: '24h → minutes on follow-up and sales proposals',
+      stack: ['React', 'Node.js', 'PostgreSQL', 'Python', 'LangGraph', 'SendGrid', 'TypeScript'],
+      metric: '24h → minutes on sales follow-up',
+      tags: ['CRM', 'AI Agents', 'Sales Automation'],
+      githubUrl: 'https://github.com/MWarrior715/multi-agent-crm',
       demoUrl: '#',
     },
   ],
