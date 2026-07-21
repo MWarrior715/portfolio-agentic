@@ -34,7 +34,7 @@ export const projectsData: Localized<ProjectData[]> = {
       impact:
         'Respuestas en segundos que citan el artículo y documento de origen, eliminando la incertidumbre de las respuestas genéricas.',
       savings: '90% menos tiempo en consultas legales',
-      stack: ['LlamaIndex', 'Pinecone', 'FastAPI', 'Python', 'OpenAI Embeddings'],
+      stack: ['ChromaDB', 'FastAPI', 'Streamlit', 'Python', 'RAG', 'MiniLM/ONNX'],
       metric: '90% menos tiempo en consultas',
       tags: ['RAG', 'Legal Tech', 'Nicho Colombia'],
       githubUrl: 'https://github.com/MWarrior715/legal-rag-colombia',
@@ -150,7 +150,7 @@ export const projectsData: Localized<ProjectData[]> = {
       impact:
         'Answers in seconds that cite the article and source document, removing the uncertainty of generic responses.',
       savings: '90% less time on legal queries',
-      stack: ['LlamaIndex', 'Pinecone', 'FastAPI', 'Python', 'OpenAI Embeddings'],
+      stack: ['ChromaDB', 'FastAPI', 'Streamlit', 'Python', 'RAG', 'MiniLM/ONNX'],
       metric: '90% less time on legal queries',
       tags: ['RAG', 'Legal Tech', 'Colombia Niche'],
       githubUrl: 'https://github.com/MWarrior715/legal-rag-colombia',
