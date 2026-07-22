@@ -53,9 +53,9 @@ export const projectsData: Localized<ProjectData[]> = {
       impact:
         'Tiempo de respuesta de 24 horas a 2 minutos, con cualificación consistente y propuestas listas sin intervención humana.',
       savings: '24h → 2 min tiempo de respuesta',
-      stack: ['n8n', 'OpenAI Functions', 'Node.js', 'SendGrid', 'PostgreSQL'],
+      stack: ['Python', 'FastAPI', 'Pydantic', 'Motor IA Local/Cloud', 'Lead Qualification'],
       metric: '24h → 2 min tiempo de respuesta',
-      tags: ['Automatización', 'n8n', 'Lead Gen'],
+      tags: ['Automatización', 'Lead Gen', 'IA Local/Cloud'],
       githubUrl: 'https://github.com/MWarrior715/autonomous-workflow',
       demoUrl: '#',
     },
@@ -83,7 +83,7 @@ export const projectsData: Localized<ProjectData[]> = {
       title: 'AI Operations Center',
       tagline: 'Consola central donde múltiples agentes colaboran en tiempo real',
       description:
-        'Consola de observabilidad y orquestación de agentes (research, sales, scheduling, customer, coding, reporting) que trabajan simultáneamente sobre un estado compartido.',
+        'Consola de observabilidad y orquestación de agentes (research, sales, scheduling, reporting) que trabajan simultáneamente sobre un estado compartido.',
       problem:
         'Cuando varios agentes operan a la vez, sin un panel único no hay visibilidad ni coordinación: cada uno trabaja a ciegas.',
       solution:
@@ -91,7 +91,7 @@ export const projectsData: Localized<ProjectData[]> = {
       impact:
         'Un solo panel para ver, coordinar y corregir todos los agentes del ecosistema en producción.',
       savings: 'Decisiones operativas en segundos, no en reuniones de alineación',
-      stack: ['React', 'TypeScript', 'Node.js', 'WebSocket', 'Redis', 'Python', 'LangGraph'],
+      stack: ['Python', 'FastAPI', 'Asyncio', 'WebSocket', 'Multi-Agent', 'Observabilidad'],
       metric: '1 consola · N agentes coordinados en tiempo real',
       tags: ['Multiagente', 'Observabilidad', 'Tiempo real'],
       githubUrl: 'https://github.com/MWarrior715/ai-operations-center',
@@ -169,9 +169,9 @@ export const projectsData: Localized<ProjectData[]> = {
       impact:
         'Response time from 24 hours to 2 minutes, with consistent qualification and proposals ready without human intervention.',
       savings: '24h → 2 min response time',
-      stack: ['n8n', 'OpenAI Functions', 'Node.js', 'SendGrid', 'PostgreSQL'],
+      stack: ['Python', 'FastAPI', 'Pydantic', 'Local/Cloud AI Engine', 'Lead Qualification'],
       metric: '24h → 2 min response time',
-      tags: ['Automation', 'n8n', 'Lead Gen'],
+      tags: ['Automation', 'Lead Gen', 'Local/Cloud AI'],
       githubUrl: 'https://github.com/MWarrior715/autonomous-workflow',
       demoUrl: '#',
     },
@@ -199,7 +199,7 @@ export const projectsData: Localized<ProjectData[]> = {
       title: 'AI Operations Center',
       tagline: 'Central console where multiple agents collaborate in real time',
       description:
-        'Observability and orchestration console for agents (research, sales, scheduling, customer, coding, reporting) working simultaneously over shared state.',
+        'Observability and orchestration console for agents (research, sales, scheduling, reporting) working simultaneously over shared state.',
       problem:
         'When several agents run at once without a single panel, there is no visibility or coordination — each works blind.',
       solution:
@@ -207,7 +207,7 @@ export const projectsData: Localized<ProjectData[]> = {
       impact:
         'A single panel to see, coordinate and correct every agent in the production ecosystem.',
       savings: 'Operational decisions in seconds, not in alignment meetings',
-      stack: ['React', 'TypeScript', 'Node.js', 'WebSocket', 'Redis', 'Python', 'LangGraph'],
+      stack: ['Python', 'FastAPI', 'Asyncio', 'WebSocket', 'Multi-Agent', 'Observability'],
       metric: '1 console · N agents coordinated in real time',
       tags: ['Multi-agent', 'Observability', 'Real-time'],
       githubUrl: 'https://github.com/MWarrior715/ai-operations-center',
