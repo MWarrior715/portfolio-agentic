@@ -76,7 +76,7 @@ export const projectsData: Localized<ProjectData[]> = {
       metric: '~70% menos gestión manual de reservas',
       tags: ['IA Conversacional', 'SaaS', 'Multi-rubro'],
       githubUrl: 'https://github.com/MWarrior715/ai-booking-engine',
-      demoUrl: '#',
+      demoUrl: 'https://ai-booking-engine-one.vercel.app',
     },
     {
       id: 'ai-operations-center',
@@ -192,7 +192,7 @@ export const projectsData: Localized<ProjectData[]> = {
       metric: '~70% less manual booking management',
       tags: ['Conversational AI', 'SaaS', 'Multi-industry'],
       githubUrl: 'https://github.com/MWarrior715/ai-booking-engine',
-      demoUrl: '#',
+      demoUrl: 'https://ai-booking-engine-one.vercel.app',
     },
     {
       id: 'ai-operations-center',
