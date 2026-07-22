@@ -100,18 +100,18 @@ export const projectsData: Localized<ProjectData[]> = {
     {
       id: 'multi-agent-crm',
       title: 'Multi-Agent CRM Assistant',
-      tagline: 'CRM impulsado por agentes que automatizan el flujo comercial completo',
+      tagline: 'Pipeline comercial automatizado con agentes especializados',
       description:
-        'CRM con agentes inteligentes: captura de leads, clasificación, resumen, seguimiento, emails, propuestas, historial y tareas, sin intervención manual.',
+        'CRM con orquestación multiagente: recibe un mensaje de lead, extrae datos, califica, resume, genera borradores de email y propuesta, y planifica tareas de seguimiento. Persistencia en SQLite.',
       problem:
-        'El seguimiento comercial se hace a mano, los leads se enfrían y el historial se pierde entre WhatsApp, correo y hojas de cálculo.',
+        'El seguimiento comercial manual retrasa respuestas, pierde contexto y deja leads sin atención oportuna.',
       solution:
-        'CRM con agentes especializados que capturan, clasifican, resumen y hacen seguimiento de leads, generan emails y propuestas, y mantienen historial y tareas unificadas.',
+        'Diseñé un orquestador con agentes especializados conectados a SQLite que ejecuta todo el flujo de captura, calificación y propuesta a partir de un mensaje de entrada.',
       impact:
-        'El flujo comercial completo en piloto automático, con contexto centralizado por lead.',
-      savings: '24h → minutos en seguimiento y propuesta comercial',
-      stack: ['React', 'Node.js', 'PostgreSQL', 'Python', 'LangGraph', 'SendGrid', 'TypeScript'],
-      metric: '24h → minutos en seguimiento comercial',
+        'Un mensaje se convierte en lead calificado, resumen ejecutivo, email personalizado, propuesta de valor y tareas de seguimiento en segundos.',
+      savings: '24h → minutos en primer seguimiento comercial',
+      stack: ['Python', 'FastAPI', 'Pydantic', 'SQLite', 'Multi-Agent', 'LLM OpenAI-compatible'],
+      metric: '24h → minutos en primer seguimiento comercial',
       tags: ['CRM', 'Agentes IA', 'Automatización comercial'],
       githubUrl: 'https://github.com/MWarrior715/multi-agent-crm',
       demoUrl: '#',
@@ -216,18 +216,18 @@ export const projectsData: Localized<ProjectData[]> = {
     {
       id: 'multi-agent-crm',
       title: 'Multi-Agent CRM Assistant',
-      tagline: 'Agent-driven CRM that automates the full sales flow',
+      tagline: 'Automated sales pipeline with specialized agents',
       description:
-        'CRM with intelligent agents: lead capture, classification, summary, follow-up, emails, proposals, history and tasks, without manual intervention.',
+        'Multi-agent CRM orchestrator: receives a lead message, extracts data, scores, summarizes, drafts follow-up emails and proposals, and schedules tasks. Persisted in SQLite.',
       problem:
-        'Sales follow-up is manual, leads go cold and history gets lost across WhatsApp, email and spreadsheets.',
+        'Manual sales follow-up delays responses, loses context, and leaves leads without timely attention.',
       solution:
-        'CRM with specialized agents that capture, classify, summarize and follow up on leads, generate emails and proposals, and keep unified history and tasks.',
+        'Built an orchestrator with specialized agents backed by SQLite that runs the full capture, qualification and proposal flow from a single inbound message.',
       impact:
-        'The full sales flow on autopilot, with centralized per-lead context.',
-      savings: '24h → minutes on follow-up and sales proposals',
-      stack: ['React', 'Node.js', 'PostgreSQL', 'Python', 'LangGraph', 'SendGrid', 'TypeScript'],
-      metric: '24h → minutes on sales follow-up',
+        'A message becomes a qualified lead, executive summary, personalized email, value proposal and follow-up tasks in seconds.',
+      savings: '24h → minutes for first sales follow-up',
+      stack: ['Python', 'FastAPI', 'Pydantic', 'SQLite', 'Multi-Agent', 'OpenAI-compatible LLM'],
+      metric: '24h → minutes for first sales follow-up',
       tags: ['CRM', 'AI Agents', 'Sales Automation'],
       githubUrl: 'https://github.com/MWarrior715/multi-agent-crm',
       demoUrl: '#',
