@@ -7,15 +7,15 @@ export const projectsData: Localized<ProjectData[]> = {
       title: 'AI App Builder Agent',
       tagline: 'De una descripción a una app funcional en minutos',
       description:
-        'Sistema multiagente (Orquestador, UI, Backend, Contenido, QA) que genera aplicaciones web completas a partir de lenguaje natural.',
+        'Sistema multiagente propio (Arquitecto, Backend, Frontend, QA, DevOps) que genera el scaffold completo de una aplicación web a partir de lenguaje natural.',
       problem:
         'Equipos junior tardan semanas en entregar una app desde cero. La distancia entre idea y producto es lenta y costosa.',
       solution:
-        'Orquesto un sistema multiagente que recibe lenguaje natural y coordina UI, Backend, Contenido y QA hasta generar una app funcional y consistente.',
+        'Diseñé un orquestador multiagente propio que recibe lenguaje natural, genera una spec técnica y coordina agentes especializados para producir backend, frontend, tests y configuración de despliegue en segundos.',
       impact:
         'Lo que 3 juniors entregan en 3 semanas, el sistema lo materializa en 2 horas, con estándares de código consistentes.',
       savings: '95% de reducción en tiempo de entrega',
-      stack: ['LangGraph', 'Claude API', 'React', 'Node.js', 'TypeScript', 'TailwindCSS'],
+      stack: ['Python', 'FastAPI', 'Pydantic', 'Multi-Agent', 'Code Generation'],
       metric: '95% reducción en tiempo de entrega',
       tags: ['Multiagente', 'Generación de Código'],
       githubUrl: 'https://github.com/MWarrior715/ai-app-builder',
@@ -123,15 +123,15 @@ export const projectsData: Localized<ProjectData[]> = {
       title: 'AI App Builder Agent',
       tagline: 'From a description to a working app in minutes',
       description:
-        'Multi-agent system (Orchestrator, UI, Backend, Content, QA) that generates complete web applications from natural language.',
+        'Own multi-agent system (Architect, Backend, Frontend, QA, DevOps) that generates the complete scaffold of a web application from natural language.',
       problem:
         'Junior teams take weeks to ship an app from scratch. The distance from idea to product is slow and expensive.',
       solution:
-        'I orchestrate a multi-agent system that takes natural language and coordinates UI, Backend, Content, and QA until it produces a functional, consistent app.',
+        'I designed my own multi-agent orchestrator that takes natural language, generates a technical spec, and coordinates specialized agents to produce backend, frontend, tests and deployment configuration in seconds.',
       impact:
         'What 3 juniors deliver in 3 weeks, this system ships in 2 hours, with consistent code standards.',
       savings: '95% reduction in delivery time',
-      stack: ['LangGraph', 'Claude API', 'React', 'Node.js', 'TypeScript', 'TailwindCSS'],
+      stack: ['Python', 'FastAPI', 'Pydantic', 'Multi-Agent', 'Code Generation'],
       metric: '95% reduction in delivery time',
       tags: ['Multi-agent', 'Code Generation'],
       githubUrl: 'https://github.com/MWarrior715/ai-app-builder',
