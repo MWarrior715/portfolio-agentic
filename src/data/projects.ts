@@ -3,6 +3,25 @@ import { type Localized, type ProjectData } from '@/types';
 export const projectsData: Localized<ProjectData[]> = {
   es: [
     {
+      id: 'legal-rag-colombia',
+      title: 'AI Legal Assistant – Propiedad Horizontal',
+      tagline: 'Jurisprudencia colombiana consultable en segundos',
+      description:
+        'Sistema RAG sobre legislación colombiana real (Ley 675 de 2001). Ingesta PDFs, vectoriza y responde citando fuentes exactas.',
+      problem:
+        'Consultar jurisprudencia de propiedad horizontal requiere horas de lectura manual de PDFs y leyes dispersas.',
+      solution:
+        'Construí un sistema RAG sobre la Ley 675 de 2001: ingestión de PDFs, vectorización semántica y respuestas con trazabilidad a la fuente legal exacta.',
+      impact:
+        'Respuestas en segundos que citan el artículo y documento de origen, eliminando la incertumbre de las respuestas genéricas.',
+      savings: '90% menos tiempo en consultas legales',
+      stack: ['ChromaDB', 'FastAPI', 'Streamlit', 'Python', 'RAG', 'MiniLM/ONNX'],
+      metric: '90% menos tiempo en consultas',
+      tags: ['RAG', 'Legal Tech', 'Nicho Colombia'],
+      githubUrl: 'https://github.com/MWarrior715/legal-rag-colombia',
+      demoUrl: '#',
+    },
+    {
       id: 'ai-app-builder',
       title: 'AI App Builder Agent',
       tagline: 'De una descripción a una app funcional en minutos',
@@ -19,25 +38,6 @@ export const projectsData: Localized<ProjectData[]> = {
       metric: '95% reducción en tiempo de entrega',
       tags: ['Multiagente', 'Generación de Código'],
       githubUrl: 'https://github.com/MWarrior715/ai-app-builder',
-      demoUrl: '#',
-    },
-    {
-      id: 'legal-rag-colombia',
-      title: 'AI Legal Assistant – Propiedad Horizontal',
-      tagline: 'Jurisprudencia colombiana consultable en segundos',
-      description:
-        'Sistema RAG sobre legislación colombiana real (Ley 675 de 2001). Ingesta PDFs, vectoriza y responde citando fuentes exactas.',
-      problem:
-        'Consultar jurisprudencia de propiedad horizontal requiere horas de lectura manual de PDFs y leyes dispersas.',
-      solution:
-        'Construí un sistema RAG sobre la Ley 675 de 2001: ingestión de PDFs, vectorización semántica y respuestas con trazabilidad a la fuente legal exacta.',
-      impact:
-        'Respuestas en segundos que citan el artículo y documento de origen, eliminando la incertidumbre de las respuestas genéricas.',
-      savings: '90% menos tiempo en consultas legales',
-      stack: ['ChromaDB', 'FastAPI', 'Streamlit', 'Python', 'RAG', 'MiniLM/ONNX'],
-      metric: '90% menos tiempo en consultas',
-      tags: ['RAG', 'Legal Tech', 'Nicho Colombia'],
-      githubUrl: 'https://github.com/MWarrior715/legal-rag-colombia',
       demoUrl: '#',
     },
     {
@@ -119,25 +119,6 @@ export const projectsData: Localized<ProjectData[]> = {
   ],
   en: [
     {
-      id: 'ai-app-builder',
-      title: 'AI App Builder Agent',
-      tagline: 'From a description to a working app in minutes',
-      description:
-        'Own multi-agent system (Architect, Backend, Frontend, QA, DevOps) that generates the complete scaffold of a web application from natural language.',
-      problem:
-        'Junior teams take weeks to ship an app from scratch. The distance from idea to product is slow and expensive.',
-      solution:
-        'I designed my own multi-agent orchestrator that takes natural language, generates a technical spec, and coordinates specialized agents to produce backend, frontend, tests and deployment configuration in seconds.',
-      impact:
-        'What 3 juniors deliver in 3 weeks, this system ships in 2 hours, with consistent code standards.',
-      savings: '95% reduction in delivery time',
-      stack: ['Python', 'FastAPI', 'Pydantic', 'Multi-Agent', 'Code Generation'],
-      metric: '95% reduction in delivery time',
-      tags: ['Multi-agent', 'Code Generation'],
-      githubUrl: 'https://github.com/MWarrior715/ai-app-builder',
-      demoUrl: '#',
-    },
-    {
       id: 'legal-rag-colombia',
       title: 'AI Legal Assistant – Horizontal Property',
       tagline: 'Colombian jurisprudence queryable in seconds',
@@ -154,6 +135,25 @@ export const projectsData: Localized<ProjectData[]> = {
       metric: '90% less time on legal queries',
       tags: ['RAG', 'Legal Tech', 'Colombia Niche'],
       githubUrl: 'https://github.com/MWarrior715/legal-rag-colombia',
+      demoUrl: '#',
+    },
+    {
+      id: 'ai-app-builder',
+      title: 'AI App Builder Agent',
+      tagline: 'From a description to a working app in minutes',
+      description:
+        'Own multi-agent system (Architect, Backend, Frontend, QA, DevOps) that generates the complete scaffold of a web application from natural language.',
+      problem:
+        'Junior teams take weeks to ship an app from scratch. The distance from idea to product is slow and expensive.',
+      solution:
+        'I designed my own multi-agent orchestrator that takes natural language, generates a technical spec, and coordinates specialized agents to produce backend, frontend, tests and deployment configuration in seconds.',
+      impact:
+        'What 3 juniors deliver in 3 weeks, this system ships in 2 hours, with consistent code standards.',
+      savings: '95% reduction in delivery time',
+      stack: ['Python', 'FastAPI', 'Pydantic', 'Multi-Agent', 'Code Generation'],
+      metric: '95% reduction in delivery time',
+      tags: ['Multi-agent', 'Code Generation'],
+      githubUrl: 'https://github.com/MWarrior715/ai-app-builder',
       demoUrl: '#',
     },
     {
