@@ -51,6 +51,7 @@ export function Projects() {
               key={project.id}
               project={project}
               codeLabel={t.projects.codeLabel}
+              caseLabels={t.projects.caseLabels}
               variants={fadeInUp}
             />
           ))}

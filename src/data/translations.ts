@@ -54,6 +54,12 @@ const es = {
     subtitle:
       'Cada caso sigue el mismo formato: problema real, solución arquitectónica, impacto medido y ahorro cuantificado.',
     codeLabel: 'Código',
+    caseLabels: {
+      problem: 'Problema',
+      solution: 'Solución',
+      impact: 'Impacto',
+      savings: 'Ahorro',
+    },
   },
   quiklii: {
     title: 'Caso',
@@ -129,6 +135,12 @@ const en: typeof es = {
     subtitle:
       'Every case follows the same format: real problem, architectural solution, measured impact, and quantified savings.',
     codeLabel: 'Code',
+    caseLabels: {
+      problem: 'Problem',
+      solution: 'Solution',
+      impact: 'Impact',
+      savings: 'Savings',
+    },
   },
   quiklii: {
     title: 'Case',

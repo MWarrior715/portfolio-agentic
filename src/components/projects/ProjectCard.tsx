@@ -8,6 +8,12 @@ import { GitHubIcon } from '@/components/ui/GitHubIcon';
 interface ProjectCardProps {
   project: ProjectData;
   codeLabel: string;
+  caseLabels: {
+    problem: string;
+    solution: string;
+    impact: string;
+    savings: string;
+  };
   variants?: Variants;
 }
 
@@ -18,12 +24,12 @@ interface CaseStep {
   accent: string;
 }
 
-export function ProjectCard({ project, codeLabel, variants }: ProjectCardProps) {
+export function ProjectCard({ project, codeLabel, caseLabels, variants }: ProjectCardProps) {
   const caseSteps: CaseStep[] = [
-    { icon: AlertCircle, label: 'Problema', text: project.problem, accent: 'text-rose-600 dark:text-rose-400' },
-    { icon: Wrench, label: 'Solución', text: project.solution, accent: 'text-indigo-600 dark:text-indigo-400' },
-    { icon: TrendingUp, label: 'Impacto', text: project.impact, accent: 'text-cyan-600 dark:text-cyan-400' },
-    { icon: PiggyBank, label: 'Ahorro', text: project.savings, accent: 'text-emerald-600 dark:text-emerald-400' },
+    { icon: AlertCircle, label: caseLabels.problem, text: project.problem, accent: 'text-rose-600 dark:text-rose-400' },
+    { icon: Wrench, label: caseLabels.solution, text: project.solution, accent: 'text-indigo-600 dark:text-indigo-400' },
+    { icon: TrendingUp, label: caseLabels.impact, text: project.impact, accent: 'text-cyan-600 dark:text-cyan-400' },
+    { icon: PiggyBank, label: caseLabels.savings, text: project.savings, accent: 'text-emerald-600 dark:text-emerald-400' },
   ];
 
   return (
