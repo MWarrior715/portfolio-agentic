@@ -54,6 +54,7 @@ const es = {
     subtitle:
       'Cada caso sigue el mismo formato: problema real, solución arquitectónica, impacto medido y ahorro cuantificado.',
     codeLabel: 'Código',
+    demoLabel: 'Demo en vivo',
     caseLabels: {
       problem: 'Problema',
       solution: 'Solución',
@@ -135,6 +136,7 @@ const en: typeof es = {
     subtitle:
       'Every case follows the same format: real problem, architectural solution, measured impact, and quantified savings.',
     codeLabel: 'Code',
+    demoLabel: 'Live demo',
     caseLabels: {
       problem: 'Problem',
       solution: 'Solution',

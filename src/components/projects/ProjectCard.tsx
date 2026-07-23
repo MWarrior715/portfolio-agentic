@@ -1,13 +1,14 @@
 // Portafolio agéntico · AI Product Builder
 import { motion } from 'framer-motion';
 import { type Variants } from 'framer-motion';
-import { AlertCircle, PiggyBank, TrendingUp, Wrench } from 'lucide-react';
+import { AlertCircle, ExternalLink, PiggyBank, TrendingUp, Wrench } from 'lucide-react';
 import { type ProjectData } from '@/types';
 import { GitHubIcon } from '@/components/ui/GitHubIcon';
 
 interface ProjectCardProps {
   project: ProjectData;
   codeLabel: string;
+  demoLabel: string;
   caseLabels: {
     problem: string;
     solution: string;
@@ -24,7 +25,8 @@ interface CaseStep {
   accent: string;
 }
 
-export function ProjectCard({ project, codeLabel, caseLabels, variants }: ProjectCardProps) {
+export function ProjectCard({ project, codeLabel, demoLabel, caseLabels, variants }: ProjectCardProps) {
+  const hasDemo = project.demoUrl && project.demoUrl !== '#';
   const caseSteps: CaseStep[] = [
     { icon: AlertCircle, label: caseLabels.problem, text: project.problem, accent: 'text-rose-600 dark:text-rose-400' },
     { icon: Wrench, label: caseLabels.solution, text: project.solution, accent: 'text-indigo-600 dark:text-indigo-400' },
@@ -78,19 +80,32 @@ export function ProjectCard({ project, codeLabel, caseLabels, variants }: Projec
         </div>
       </div>
 
-      <div className="mt-auto flex items-center justify-between border-t border-gray-200 p-6 dark:border-gray-800">
-        <span className="text-sm font-semibold text-gray-900 dark:text-gray-50">
+      <div className="mt-auto border-t border-gray-200 p-6 dark:border-gray-800">
+        <p className="mb-4 text-sm font-semibold text-gray-900 dark:text-gray-50">
           {project.metric}
-        </span>
-        <a
-          href={project.githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
-        >
-          <GitHubIcon className="h-4 w-4" />
-          {codeLabel}
-        </a>
+        </p>
+        <div className="flex items-center gap-5">
+          {hasDemo && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-cyan-600 transition-colors hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300"
+            >
+              <ExternalLink className="h-4 w-4" />
+              {demoLabel}
+            </a>
+          )}
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
+          >
+            <GitHubIcon className="h-4 w-4" />
+            {codeLabel}
+          </a>
+        </div>
       </div>
     </motion.article>
   );
