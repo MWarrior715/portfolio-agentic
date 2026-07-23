@@ -82,7 +82,7 @@ export function AiFirstEngineering() {
             const Icon = style.icon;
             return (
               <motion.div
-                key={role.title}
+                key={index}
                 variants={fadeInUp}
                 whileHover={{ scale: 1.02 }}
                 className={`rounded-xl border border-gray-200 bg-gray-50 p-8 shadow-sm transition-colors dark:border-gray-800 dark:bg-gray-900 ${style.hoverBorder}`}

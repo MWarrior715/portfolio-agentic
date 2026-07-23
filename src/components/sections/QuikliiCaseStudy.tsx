@@ -53,9 +53,9 @@ export function QuikliiCaseStudy() {
           viewport={viewportOnce}
           variants={staggerContainer}
         >
-          {metrics.map((metric) => (
+          {metrics.map((metric, index) => (
             <motion.div
-              key={metric.label}
+              key={index}
               variants={scaleIn}
               className="rounded-xl border border-gray-200 bg-white p-5 text-center dark:border-gray-800 dark:bg-gray-900"
             >
