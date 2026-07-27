@@ -22,47 +22,48 @@ interface CaseStep {
   icon: typeof AlertCircle;
   label: string;
   text: string;
-  accent: string;
 }
 
 export function ProjectCard({ project, codeLabel, demoLabel, caseLabels, variants }: ProjectCardProps) {
   const hasDemo = project.demoUrl && project.demoUrl !== '#';
+
   const caseSteps: CaseStep[] = [
-    { icon: AlertCircle, label: caseLabels.problem, text: project.problem, accent: 'text-rose-600 dark:text-rose-400' },
-    { icon: Wrench, label: caseLabels.solution, text: project.solution, accent: 'text-indigo-600 dark:text-indigo-400' },
-    { icon: TrendingUp, label: caseLabels.impact, text: project.impact, accent: 'text-cyan-600 dark:text-cyan-400' },
-    { icon: PiggyBank, label: caseLabels.savings, text: project.savings, accent: 'text-emerald-600 dark:text-emerald-400' },
+    { icon: AlertCircle, label: caseLabels.problem, text: project.problem },
+    { icon: Wrench, label: caseLabels.solution, text: project.solution },
+    { icon: TrendingUp, label: caseLabels.impact, text: project.impact },
+    { icon: PiggyBank, label: caseLabels.savings, text: project.savings },
   ];
 
   return (
     <motion.article
       variants={variants}
-      className="flex flex-col rounded-2xl border border-gray-200 bg-white shadow-sm transition-colors hover:border-indigo-300 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-indigo-500"
+      data-od-id={`project-card-${project.id}`}
+      className="flex flex-col rounded-2xl border border-structural bg-surface"
     >
       <div className="p-6 sm:p-8">
-        <div className="mb-4 flex flex-wrap gap-2">
+        <div className="mb-5 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300"
+              className="rounded-md border border-structural px-2.5 py-1 font-mono text-xs text-[var(--muted)]"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <h3 className="text-xl font-bold text-gray-900 dark:text-gray-50">{project.title}</h3>
-        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{project.tagline}</p>
+        <h3 className="text-xl font-semibold tracking-[-0.01em] text-[var(--fg)]">{project.title}</h3>
+        <p className="mt-1 text-sm text-[var(--muted)]">{project.tagline}</p>
 
         <ul className="mt-6 space-y-4">
           {caseSteps.map((step) => (
             <li key={step.label} className="flex gap-3">
-              <step.icon className={`mt-0.5 h-5 w-5 shrink-0 ${step.accent}`} />
+              <step.icon className="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" />
               <div>
-                <p className={`text-xs font-semibold uppercase tracking-wide ${step.accent}`}>
+                <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--muted)]">
                   {step.label}
                 </p>
-                <p className="text-sm text-gray-700 dark:text-gray-300">{step.text}</p>
+                <p className="mt-0.5 text-sm leading-relaxed text-[var(--fg)]">{step.text}</p>
               </div>
             </li>
           ))}
@@ -72,7 +73,7 @@ export function ProjectCard({ project, codeLabel, demoLabel, caseLabels, variant
           {project.stack.map((tech) => (
             <span
               key={tech}
-              className="rounded-md bg-gray-100 px-2 py-1 font-mono text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300"
+              className="rounded-md bg-surface-raised px-2 py-1 font-mono text-xs text-[var(--muted)]"
             >
               {tech}
             </span>
@@ -80,8 +81,8 @@ export function ProjectCard({ project, codeLabel, demoLabel, caseLabels, variant
         </div>
       </div>
 
-      <div className="mt-auto border-t border-gray-200 p-6 dark:border-gray-800">
-        <p className="mb-4 text-sm font-semibold text-gray-900 dark:text-gray-50">
+      <div className="mt-auto border-t border-structural p-6">
+        <p className="mb-4 font-mono text-sm font-medium text-[var(--accent)]">
           {project.metric}
         </p>
         <div className="flex items-center gap-5">
@@ -90,9 +91,9 @@ export function ProjectCard({ project, codeLabel, demoLabel, caseLabels, variant
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-cyan-600 transition-colors hover:text-cyan-700 dark:text-cyan-400 dark:hover:text-cyan-300"
+              className="inline-flex items-center gap-2 text-sm font-medium text-[var(--fg)] transition-colors hover:text-[var(--accent)]"
             >
-              <ExternalLink className="h-4 w-4" />
+              <ExternalLink className="h-4 w-4 text-[var(--accent)]" />
               {demoLabel}
             </a>
           )}
@@ -100,9 +101,9 @@ export function ProjectCard({ project, codeLabel, demoLabel, caseLabels, variant
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--fg)] transition-colors hover:text-[var(--accent)]"
           >
-            <GitHubIcon className="h-4 w-4" />
+            <GitHubIcon className="h-4 w-4 text-[var(--accent)]" />
             {codeLabel}
           </a>
         </div>

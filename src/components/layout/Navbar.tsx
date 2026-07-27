@@ -31,9 +31,15 @@ export function Navbar() {
   }, [lang]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-md dark:border-gray-800 dark:bg-[#0a0a0f]/80">
+    <header
+      data-od-id="navbar"
+      className="sticky top-0 z-50 border-b border-structural bg-[var(--bg)]/80 backdrop-blur-md"
+    >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <a href="#inicio" className="text-xl font-bold text-indigo-600 dark:text-indigo-400">
+        <a
+          href="#inicio"
+          className="font-display text-xl font-semibold tracking-[-0.02em] text-[var(--fg)]"
+        >
           MGuerrero
         </a>
 
@@ -43,7 +49,7 @@ export function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm font-medium text-gray-600 transition-colors hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400"
+                  className="text-sm font-medium tracking-[0.01em] text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
                 >
                   {t.nav[link.key]}
                 </a>
@@ -51,17 +57,17 @@ export function Navbar() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-2 rounded-lg border border-gray-200 p-0.5 dark:border-gray-800">
+          <div className="flex items-center gap-1 rounded-lg border border-structural p-0.5">
             {langOptions.map((option) => (
               <button
                 key={option}
                 type="button"
                 aria-pressed={lang === option}
                 onClick={() => setLang(option)}
-                className={`rounded-md px-2.5 py-1 text-xs font-semibold uppercase transition-colors ${
+                className={`rounded-md px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-[0.06em] transition-colors ${
                   lang === option
-                    ? 'bg-indigo-600 text-white dark:bg-indigo-500'
-                    : 'text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
+                    ? 'bg-surface-raised text-[var(--accent)]'
+                    : 'text-[var(--muted)] hover:text-[var(--fg)]'
                 }`}
               >
                 {option}
@@ -72,7 +78,7 @@ export function Navbar() {
           <button
             type="button"
             aria-label={isDark ? t.nav.themeToLight : t.nav.themeToDark}
-            className="rounded-md p-2 text-gray-600 transition-colors hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+            className="rounded-md p-2 text-[var(--muted)] transition-colors hover:bg-surface-raised hover:text-[var(--fg)]"
             onClick={toggleTheme}
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
@@ -82,7 +88,7 @@ export function Navbar() {
         <button
           type="button"
           aria-label={isOpen ? t.nav.menuClose : t.nav.menuOpen}
-          className="rounded-md p-2 text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 md:hidden"
+          className="rounded-md p-2 text-[var(--muted)] hover:bg-surface-raised hover:text-[var(--fg)] md:hidden"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -90,13 +96,16 @@ export function Navbar() {
       </nav>
 
       {isOpen && (
-        <div className="border-t border-gray-200 bg-white px-4 py-4 dark:border-gray-800 dark:bg-[#0a0a0f] md:hidden">
+        <div
+          data-od-id="mobile-menu"
+          className="border-t border-structural bg-[var(--bg)] px-4 py-4 md:hidden"
+        >
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block text-base font-medium text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400"
+                  className="block text-base font-medium text-[var(--muted)] hover:text-[var(--accent)]"
                   onClick={() => setIsOpen(false)}
                 >
                   {t.nav[link.key]}
@@ -105,17 +114,17 @@ export function Navbar() {
             ))}
           </ul>
           <div className="mt-4 flex items-center gap-3">
-            <div className="flex items-center gap-2 rounded-lg border border-gray-200 p-0.5 dark:border-gray-800">
+            <div className="flex items-center gap-1 rounded-lg border border-structural p-0.5">
               {langOptions.map((option) => (
                 <button
                   key={option}
                   type="button"
                   aria-pressed={lang === option}
                   onClick={() => setLang(option)}
-                  className={`rounded-md px-2.5 py-1 text-xs font-semibold uppercase transition-colors ${
+                  className={`rounded-md px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-[0.06em] transition-colors ${
                     lang === option
-                      ? 'bg-indigo-600 text-white dark:bg-indigo-500'
-                      : 'text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50'
+                      ? 'bg-surface-raised text-[var(--accent)]'
+                      : 'text-[var(--muted)] hover:text-[var(--fg)]'
                   }`}
                 >
                   {option}
@@ -125,7 +134,7 @@ export function Navbar() {
             <button
               type="button"
               aria-label={isDark ? t.nav.themeToLight : t.nav.themeToDark}
-              className="rounded-md p-2 text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+              className="rounded-md p-2 text-[var(--muted)] hover:bg-surface-raised hover:text-[var(--fg)]"
               onClick={toggleTheme}
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}

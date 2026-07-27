@@ -14,7 +14,8 @@ export function Contact() {
   return (
     <section
       id="contacto"
-      className="min-h-screen bg-gray-50 px-4 py-24 dark:bg-[#0a0a0f] sm:px-6 lg:px-8"
+      data-od-id="contact"
+      className="border-t border-structural bg-surface px-4 py-24 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-5xl">
         <motion.div
@@ -24,23 +25,29 @@ export function Contact() {
           viewport={viewportOnce}
           variants={staggerContainer}
         >
+          <motion.p
+            variants={fadeInUp}
+            className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--accent)]"
+          >
+            {t.contact.title}
+          </motion.p>
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl font-bold text-gray-900 dark:text-gray-50 sm:text-4xl"
+            className="font-display mt-4 text-4xl font-semibold tracking-[-0.02em] text-[var(--fg)] sm:text-5xl"
           >
             {t.contact.title}{' '}
-            <span className="text-indigo-600 dark:text-indigo-400">{t.contact.titleAccent}</span>
+            <span className="text-[var(--muted)]">{t.contact.titleAccent}</span>
           </motion.h2>
           <motion.p
             variants={fadeInUp}
-            className="mt-4 text-lg text-gray-600 dark:text-gray-400"
+            className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--muted)]"
           >
             {t.contact.subtitle}
           </motion.p>
         </motion.div>
 
         <motion.div
-          className="grid gap-4 sm:grid-cols-2"
+          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
@@ -61,7 +68,8 @@ export function Contact() {
           <motion.a
             variants={fadeInUp}
             href="mailto:mguerrerom715@gmail.com"
-            className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400"
+            data-od-id="contact-cta"
+            className="inline-flex items-center justify-center rounded-lg bg-[var(--accent)] px-8 py-4 text-sm font-semibold tracking-[0.02em] text-[var(--bg)] transition-transform hover:translate-y-[-2px]"
           >
             {t.contact.cta}
           </motion.a>

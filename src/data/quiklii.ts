@@ -7,9 +7,9 @@ export const quikliiData: Localized<QuikliiData> = {
       'QUIKLII no es una app de domicilios más. Es el laboratorio donde integro desarrollo, IA, pagos y operaciones en tiempo real sobre una sola arquitectura. Cada pedido cruza 5 sistemas distintos y se resuelve en segundos.',
     stack: ['React', 'Node.js', 'PostgreSQL', 'Wompi', 'Nequi', 'PSE', 'Efectivo', 'Socket.io', 'TypeScript'],
     metrics: [
-      { value: '40%', label: 'más rápido que el promedio de la industria' },
+      { value: 'Pagos reales', label: 'desde el día 1: Wompi + Efectivo con HMAC e idempotencia' },
+      { value: '6', label: 'métodos de pago colombianos: Nequi, Daviplata, PSE, Bre-B, tarjetas y contraentrega' },
       { value: '3 capas', label: 'AI-assisted · Operaciones · Crecimiento' },
-      { value: '5', label: 'métodos de pago unificados en un solo flujo' },
       { value: 'Tiempo real', label: 'tracking con Socket.io' },
     ],
     layers: [
@@ -62,8 +62,8 @@ const orderFlow = await agent.orchestrate([
   agent.optimizeRoute({ traffic: "live" })
 ]);
 
-// Result: Pedido entregado 40% más rápido
-// que el promedio de la industria.`,
+// Result: Pedido trazado de pago a entrega
+// con validación HMAC e idempotencia garantizada.`,
   },
   en: {
     positioning: 'Integration Lab',
@@ -71,9 +71,9 @@ const orderFlow = await agent.orchestrate([
       'QUIKLII is not just another delivery app. It is the lab where I integrate development, AI, payments, and real-time operations on a single architecture. Every order crosses 5 different systems and resolves in seconds.',
     stack: ['React', 'Node.js', 'PostgreSQL', 'Wompi', 'Nequi', 'PSE', 'Cash', 'Socket.io', 'TypeScript'],
     metrics: [
-      { value: '40%', label: 'faster than the industry average' },
+      { value: 'Real payments', label: 'from day one: Wompi + Cash with HMAC and idempotency' },
+      { value: '6', label: 'Colombian payment methods: Nequi, Daviplata, PSE, Bre-B, cards and cash on delivery' },
       { value: '3 layers', label: 'AI-assisted · Operations · Growth' },
-      { value: '5', label: 'payment methods unified in one flow' },
       { value: 'Real-time', label: 'tracking with Socket.io' },
     ],
     layers: [
@@ -126,7 +126,7 @@ const orderFlow = await agent.orchestrate([
   agent.optimizeRoute({ traffic: "live" })
 ]);
 
-// Result: Order delivered 40% faster
-// than the industry average.`,
+// Result: Order traced from payment to delivery
+// with guaranteed HMAC validation and idempotency.`,
   },
 };

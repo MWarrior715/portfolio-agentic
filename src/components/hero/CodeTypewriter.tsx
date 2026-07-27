@@ -9,7 +9,7 @@ interface CodeTypewriterProps {
 
 export function CodeTypewriter({
   code,
-  typingSpeed = 32,
+  typingSpeed = 24,
   className = '',
 }: CodeTypewriterProps) {
   const [displayed, setDisplayed] = useState('');
@@ -31,13 +31,22 @@ export function CodeTypewriter({
   }, [code, typingSpeed]);
 
   return (
-    <pre
-      className={`overflow-x-auto rounded-lg border border-gray-200 bg-gray-100 p-4 text-left text-xs leading-relaxed dark:border-gray-800 dark:bg-[#0d1117] sm:text-sm ${className}`}
+    <div
+      className={`overflow-hidden rounded-xl border border-structural bg-[var(--surface)] shadow-2xl ${className}`}
+      data-od-id="code-terminal"
     >
-      <code className="font-mono text-gray-800 dark:text-gray-200">
-        {displayed}
-        <span className="inline-block h-4 w-2 animate-pulse bg-indigo-500 align-text-bottom" />
-      </code>
-    </pre>
+      <div className="flex items-center gap-2 border-b border-structural px-4 py-3">
+        <span className="h-3 w-3 rounded-full bg-[oklch(60%_0.15_25)]" />
+        <span className="h-3 w-3 rounded-full bg-[oklch(75%_0.15_95)]" />
+        <span className="h-3 w-3 rounded-full bg-[var(--accent)]" />
+        <span className="ml-3 font-mono text-xs text-[var(--muted)]">quiklii-architecture.ts</span>
+      </div>
+      <pre className="overflow-x-auto p-5 text-left text-xs leading-relaxed sm:text-sm">
+        <code className="font-mono text-[var(--fg)]">
+          {displayed}
+          <span className="inline-block h-4 w-2 animate-pulse bg-[var(--accent)] align-text-bottom" />
+        </code>
+      </pre>
+    </div>
   );
 }

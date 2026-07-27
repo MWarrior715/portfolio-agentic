@@ -23,43 +23,35 @@ const iconMap: Record<ContactIcon, ComponentType<{ className?: string }>> = {
 
 export function ContactCard({ item, variants }: ContactCardProps) {
   const Icon = iconMap[item.icon];
-  const cardClass =
-    'flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-5 transition-colors dark:border-gray-800 dark:bg-gray-900';
-  const hoverClass = item.href
-    ? 'hover:border-indigo-300 dark:hover:border-indigo-500'
-    : '';
-  const iconClass =
-    'inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400';
+  const Wrapper = item.href ? motion.a : motion.div;
 
   const content = (
     <>
-      <span className={iconClass}>
+      <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-surface-raised text-[var(--accent)]">
         <Icon className="h-5 w-5" />
       </span>
       <span className="min-w-0">
-        <span className="block text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
+        <span className="block font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--muted)]">
           {item.label}
         </span>
-        <span className="block truncate text-sm font-medium text-gray-900 dark:text-gray-50">
-          {item.value}
-        </span>
+        <span className="block truncate text-sm font-medium text-[var(--fg)]">{item.value}</span>
       </span>
     </>
   );
 
   return (
-    <motion.div variants={variants}>
+    <motion.div variants={variants} data-od-id={`contact-${item.id}`}>
       {item.href ? (
-        <a
+        <Wrapper
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${cardClass} ${hoverClass}`}
+          className="flex items-center gap-4 rounded-xl border border-structural bg-[var(--bg)] p-5 transition-colors hover:border-[var(--accent)]"
         >
           {content}
-        </a>
+        </Wrapper>
       ) : (
-        <div className={cardClass}>{content}</div>
+        <Wrapper className="flex items-center gap-4 rounded-xl border border-structural bg-[var(--bg)] p-5">{content}</Wrapper>
       )}
     </motion.div>
   );

@@ -5,8 +5,6 @@ import { Hero } from '@/components/hero/Hero';
 import { AiFirstEngineering } from '@/components/sections/AiFirstEngineering';
 import { Footer } from '@/components/layout/Footer';
 
-// Code-splitting: solo las secciones bajo el fold se cargan bajo demanda.
-// Navbar, Hero, Ingeniería AI-First y Footer quedan sincrónicos (LCP crítico).
 const Projects = lazy(() =>
   import('@/components/sections/Projects').then((m) => ({ default: m.Projects }))
 );
@@ -20,11 +18,10 @@ const Contact = lazy(() =>
   import('@/components/sections/Contact').then((m) => ({ default: m.Contact }))
 );
 
-/** Placeholder con pulse que reserva altura para evitar CLS mientras carga la sección. */
 function SectionFallback() {
   return (
     <div
-      className="min-h-[400px] animate-pulse rounded-2xl bg-gray-50 dark:bg-gray-900"
+      className="min-h-[400px] rounded-2xl border border-structural bg-surface"
       aria-hidden="true"
     />
   );
@@ -32,12 +29,11 @@ function SectionFallback() {
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 dark:bg-[#0a0a0f] dark:text-gray-50">
+    <div className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
       <Navbar />
 
       <main>
         <Hero />
-
         <AiFirstEngineering />
 
         <Suspense fallback={<SectionFallback />}>

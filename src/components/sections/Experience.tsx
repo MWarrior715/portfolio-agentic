@@ -1,7 +1,6 @@
 // Portafolio agéntico · AI Product Builder
 import { motion } from 'framer-motion';
 import { experienceData } from '@/data/experience';
-import { TimelineItem } from '@/components/experience/TimelineItem';
 import { fadeInUp, staggerContainer, viewportOnce } from '@/lib/animations';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useLanguageStore } from '@/store/useLanguageStore';
@@ -14,7 +13,8 @@ export function Experience() {
   return (
     <section
       id="experiencia"
-      className="min-h-screen bg-white px-4 py-24 dark:bg-[#0a0a0f] sm:px-6 lg:px-8"
+      data-od-id="experience"
+      className="bg-[var(--bg)] px-4 py-24 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-4xl">
         <motion.div
@@ -24,32 +24,52 @@ export function Experience() {
           viewport={viewportOnce}
           variants={staggerContainer}
         >
+          <motion.p
+            variants={fadeInUp}
+            className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--accent)]"
+          >
+            {t.experience.title}
+          </motion.p>
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl font-bold text-gray-900 dark:text-gray-50 sm:text-4xl"
+            className="font-display mt-4 text-4xl font-semibold tracking-[-0.02em] text-[var(--fg)] sm:text-5xl"
           >
             {t.experience.title}{' '}
-            <span className="text-indigo-600 dark:text-indigo-400">{t.experience.titleAccent}</span>
+            <span className="text-[var(--muted)]">{t.experience.titleAccent}</span>
           </motion.h2>
           <motion.p
             variants={fadeInUp}
-            className="mt-4 text-lg text-gray-600 dark:text-gray-400"
+            className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--muted)]"
           >
             {t.experience.subtitle}
           </motion.p>
         </motion.div>
 
-        <motion.ol
-          className="relative space-y-10 border-l border-gray-200 pl-2 dark:border-gray-800"
+        <motion.ul
+          className="grid gap-6 sm:grid-cols-2"
           initial="hidden"
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
         >
           {items.map((item) => (
-            <TimelineItem key={item.id} item={item} variants={fadeInUp} />
+            <motion.li
+              key={item.id}
+              variants={fadeInUp}
+              data-od-id={`experience-${item.id}`}
+              className="rounded-xl border border-structural bg-surface p-6"
+            >
+              <p className="font-mono text-xs uppercase tracking-[0.08em] text-[var(--accent)]">
+                {item.period}
+              </p>
+              <h3 className="mt-2 text-lg font-semibold tracking-[-0.01em] text-[var(--fg)]">
+                {item.role}
+              </h3>
+              <p className="mt-1 text-sm font-medium text-[var(--muted)]">{item.organization}</p>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">{item.impact}</p>
+            </motion.li>
           ))}
-        </motion.ol>
+        </motion.ul>
       </div>
     </section>
   );

@@ -13,22 +13,35 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="flex min-h-screen items-center justify-center bg-white px-4 dark:bg-[#0a0a0f] sm:px-6 lg:px-8"
+      data-od-id="hero"
+      className="flex min-h-[calc(100vh-72px)] items-center bg-[var(--bg)] px-4 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-        <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
+      <div className="mx-auto grid w-full max-w-7xl items-center gap-16 py-20 lg:grid-cols-2">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+          className="max-w-2xl"
+        >
+          <motion.p
+            variants={fadeInUp}
+            className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--accent)]"
+          >
+            AI Product Builder · Systems Integrator
+          </motion.p>
+
           <motion.h1
             variants={fadeInUp}
-            className="text-4xl font-bold leading-tight text-gray-900 dark:text-gray-50 sm:text-5xl md:text-6xl"
+            className="font-display mt-5 text-5xl font-semibold leading-[0.95] tracking-[-0.03em] text-[var(--fg)] sm:text-6xl md:text-7xl"
           >
-            {t.hero.titleLine1}{' '}
-            <span className="text-indigo-600 dark:text-indigo-400">{t.hero.titleSep}</span>{' '}
+            {t.hero.titleLine1}
+            <span className="text-[var(--muted)]"> {t.hero.titleSep} </span>
             {t.hero.titleLine2}
           </motion.h1>
 
           <motion.p
             variants={fadeInUp}
-            className="mt-6 max-w-2xl text-lg text-gray-600 dark:text-gray-400"
+            className="mt-8 max-w-xl text-lg leading-relaxed text-[var(--muted)]"
           >
             {t.hero.subtitle}
           </motion.p>
@@ -39,21 +52,28 @@ export function Hero() {
           >
             <a
               href="#proyectos"
-              className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400"
+              data-od-id="hero-cta-primary"
+              className="inline-flex items-center justify-center rounded-lg bg-[var(--accent)] px-7 py-3.5 text-sm font-semibold tracking-[0.02em] text-[var(--bg)] transition-transform hover:translate-y-[-2px]"
             >
               {t.hero.ctaProjects}
             </a>
             <a
               href="#contacto"
-              className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-gray-50 dark:hover:bg-gray-800"
+              data-od-id="hero-cta-secondary"
+              className="inline-flex items-center justify-center rounded-lg border border-structural px-7 py-3.5 text-sm font-semibold tracking-[0.02em] text-[var(--fg)] transition-colors hover:bg-surface-raised"
             >
               {t.hero.ctaContact}
             </a>
           </motion.div>
         </motion.div>
 
-        <motion.div initial="hidden" animate="visible" variants={fadeInRight}>
-          <CodeTypewriter code={quikliiData[lang].architectureCode} typingSpeed={24} />
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeInRight}
+          data-od-id="hero-terminal"
+        >
+          <CodeTypewriter code={quikliiData[lang].architectureCode} typingSpeed={18} />
         </motion.div>
       </div>
     </section>
