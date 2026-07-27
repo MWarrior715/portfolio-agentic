@@ -32,7 +32,7 @@ export function Hero() {
 
           <motion.h1
             variants={fadeInUp}
-            className="font-display mt-5 text-5xl font-semibold leading-[0.95] tracking-[-0.03em] text-[var(--fg)] sm:text-6xl md:text-7xl"
+            className="font-display mt-5 text-5xl font-semibold leading-[0.95] tracking-[-0.02em] text-[var(--fg)] sm:text-6xl md:text-7xl"
           >
             {t.hero.titleLine1}
             <span className="text-[var(--muted)]"> {t.hero.titleSep} </span>

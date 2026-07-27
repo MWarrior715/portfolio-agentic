@@ -36,7 +36,7 @@ Light mode invertido:
 
 ## Escala tipográfica
 
-- **Display**: `"Bodoni Moda"` / `Playfair Display` → serif condensada. Títulos hero ≥ 56px, tracking -0.03em.
+- **Display**: `"Newsreader"` / `Source Serif 4` → serif de alto rendimiento en pantalla. Títulos hero ≥ 56px, tracking -0.02em.
 - **Body**: `Inter` → 16px/1.6, tracking 0.
 - **Mono**: `JetBrains Mono` → stack, métricas, labels de tech, código.
 - **UI labels / buttons**: Inter 14px, weight 500, tracking 0.02em, mayúsculas con tracking 0.08em.
