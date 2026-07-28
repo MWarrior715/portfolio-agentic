@@ -29,7 +29,7 @@ export function Projects() {
             variants={fadeInUp}
             className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--accent)]"
           >
-            AI Product Lab
+            {t.projects.eyebrow}
           </motion.p>
           <motion.h2
             variants={fadeInUp}

@@ -17,6 +17,7 @@ const es = {
     langEn: 'EN',
   },
   hero: {
+    eyebrow: 'Perfil Profesional',
     titleLine1: 'AI Product Builder',
     titleSep: '&',
     titleLine2: 'Systems Integrator',
@@ -26,22 +27,26 @@ const es = {
     ctaContact: 'Contactar',
   },
   aiFirst: {
+    eyebrow: 'METODOLOGÍA',
     title: 'Ingeniería',
     titleAccent: 'AI-First',
     subtitle:
-      'No solo uso IA para escribir código. Diseño sistemas donde agentes especializados orquestan cada fase del desarrollo.',
+      'No solo uso IA para escribir código. Diseño sistemas donde agentes especializados orquestan cada fase del desarrollo desde el contexto y las realidades del producto o solución.',
     roles: [
       {
+        eyebrow: 'Orquestación',
         title: 'Agente Orquestador',
         description:
           'Planifica, divide tareas y gestiona el contexto global del proyecto.',
       },
       {
+        eyebrow: 'Generación',
         title: 'Agente Constructor',
         description:
           'Genera, refactoriza y valida código production-ready con estándares estrictos.',
       },
       {
+        eyebrow: 'Razonamiento',
         title: 'Agente de Razonamiento',
         description:
           'Valida lógica de negocio, sugiere optimizaciones y asegura coherencia arquitectónica.',
@@ -49,8 +54,9 @@ const es = {
     ],
   },
   projects: {
-    title: 'Proyectos',
-    titleAccent: 'AI Product Lab',
+    eyebrow: 'LABORATORIO IA',
+    title: 'Laboratorio de Productos',
+    titleAccent: 'IA',
     subtitle:
       'Cada caso sigue el mismo formato: problema real, solución arquitectónica, impacto medido y ahorro cuantificado.',
     codeLabel: 'Código',
@@ -73,13 +79,14 @@ const es = {
     title: 'Experiencia',
     titleAccent: 'con impacto',
     subtitle:
-      'Una década construyendo productos reales para empresas y emprendimientos. Aquí el resultado, no la lista de tareas.',
+      'Una década construyendo productos reales para empresas y emprendimientos. Siempre entendiendo el contexto y la realidad donde la solución o producto se implementa.',
   },
   contact: {
+    eyebrow: 'CONTACTO',
     title: 'Hablemos de tu',
     titleAccent: 'proyecto',
     subtitle:
-      'Abierto a retos de producto, integración de sistemas y oportunidades laborales para financiar QUIKLII. Cualquiera de estos canales funciona.',
+      'Quiero aportar al desarrollo de productos, integración de sistemas y oportunidades laborales.',
     cta: 'Escríbeme directamente',
   },
 };
@@ -99,6 +106,7 @@ const en: typeof es = {
     langEn: 'EN',
   },
   hero: {
+    eyebrow: 'Professional Profile',
     titleLine1: 'AI Product Builder',
     titleSep: '&',
     titleLine2: 'Systems Integrator',
@@ -108,22 +116,26 @@ const en: typeof es = {
     ctaContact: 'Contact',
   },
   aiFirst: {
+    eyebrow: 'METHODOLOGY',
     title: 'Engineering',
     titleAccent: 'AI-First',
     subtitle:
-      "I don't just use AI to write code. I design systems where specialized agents orchestrate every phase of development.",
+      "I don't just use AI to write code. I design systems where specialized agents orchestrate every phase of development from the context and realities of the product or solution.",
     roles: [
       {
+        eyebrow: 'Orchestration',
         title: 'Orchestrator Agent',
         description:
           'Plans, divides tasks, and manages the global project context.',
       },
       {
+        eyebrow: 'Generation',
         title: 'Builder Agent',
         description:
           'Generates, refactors, and validates production-ready code with strict standards.',
       },
       {
+        eyebrow: 'Reasoning',
         title: 'Reasoning Agent',
         description:
           'Validates business logic, suggests optimizations, and ensures architectural coherence.',
@@ -131,8 +143,9 @@ const en: typeof es = {
     ],
   },
   projects: {
-    title: 'Projects',
-    titleAccent: 'AI Product Lab',
+    eyebrow: 'AI LAB',
+    title: 'AI Products',
+    titleAccent: 'Lab',
     subtitle:
       'Every case follows the same format: real problem, architectural solution, measured impact, and quantified savings.',
     codeLabel: 'Code',
@@ -155,13 +168,14 @@ const en: typeof es = {
     title: 'Experience',
     titleAccent: 'with impact',
     subtitle:
-      'A decade building real products for companies and ventures. Here\'s the outcome, not the task list.',
+      'A decade building real products for companies and ventures. Always understanding the context and reality where the solution or product is implemented.',
   },
   contact: {
+    eyebrow: 'CONTACT',
     title: "Let's talk about your",
     titleAccent: 'project',
     subtitle:
-      'Open to product challenges, systems integration, and job opportunities to fund QUIKLII. Any of these channels works.',
+      'I want to contribute to product development, systems integration, and job opportunities.',
     cta: 'Email me directly',
   },
 };

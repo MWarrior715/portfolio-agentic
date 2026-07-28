@@ -27,7 +27,7 @@ export function Hero() {
             variants={fadeInUp}
             className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--accent)]"
           >
-            AI Product Builder · Systems Integrator
+            {t.hero.eyebrow}
           </motion.p>
 
           <motion.h1

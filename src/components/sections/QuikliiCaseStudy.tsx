@@ -9,7 +9,7 @@ import { useLanguageStore } from '@/store/useLanguageStore';
 export function QuikliiCaseStudy() {
   const t = useTranslation();
   const lang = useLanguageStore((state) => state.lang);
-  const { positioning, description, stack, layers, metrics } = quikliiData[lang];
+  const { positioning, description, stack, layers, metrics, flowSteps } = quikliiData[lang];
 
   return (
     <section
@@ -117,7 +117,7 @@ export function QuikliiCaseStudy() {
             className="rounded-xl border border-structural bg-[var(--bg)] p-6"
             data-od-id="quiklii-diagram"
           >
-            <QuikliiFlowDiagram />
+            <QuikliiFlowDiagram steps={flowSteps} />
           </motion.div>
         </motion.div>
       </div>
@@ -125,21 +125,13 @@ export function QuikliiCaseStudy() {
   );
 }
 
-function QuikliiFlowDiagram() {
-  const steps = [
-    { id: 'order', label: 'Pedido' },
-    { id: 'payment', label: 'Pago' },
-    { id: 'driver', label: 'Driver' },
-    { id: 'track', label: 'Tracking' },
-    { id: 'deliver', label: 'Entrega' },
-  ];
-
+function QuikliiFlowDiagram({ steps }: { steps: string[] }) {
   return (
     <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
       {steps.map((step, index) => (
-        <div key={step.id} className="flex items-center gap-3">
+        <div key={index} className="flex items-center gap-3">
           <div className="flex-1 rounded-lg border border-structural bg-surface p-3 text-center">
-            <span className="font-mono text-xs text-[var(--fg)]">{step.label}</span>
+            <span className="font-mono text-xs text-[var(--fg)]">{step}</span>
           </div>
           {index < steps.length - 1 && (
             <span className="hidden text-[var(--accent)] sm:inline">→</span>

@@ -12,6 +12,7 @@ export const quikliiData: Localized<QuikliiData> = {
       { value: '3 capas', label: 'AI-assisted · Operaciones · Crecimiento' },
       { value: 'Tiempo real', label: 'tracking con Socket.io' },
     ],
+    flowSteps: ['Pedido', 'Pago', 'Conductor', 'Seguimiento', 'Entrega'],
     layers: [
       {
         id: 'ai-assisted',
@@ -76,6 +77,7 @@ const orderFlow = await agent.orchestrate([
       { value: '3 layers', label: 'AI-assisted · Operations · Growth' },
       { value: 'Real-time', label: 'tracking with Socket.io' },
     ],
+    flowSteps: ['Order', 'Payment', 'Driver', 'Tracking', 'Delivery'],
     layers: [
       {
         id: 'ai-assisted',

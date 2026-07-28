@@ -29,7 +29,7 @@ export function Contact() {
             variants={fadeInUp}
             className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--accent)]"
           >
-            {t.contact.title}
+            {t.contact.eyebrow}
           </motion.p>
           <motion.h2
             variants={fadeInUp}

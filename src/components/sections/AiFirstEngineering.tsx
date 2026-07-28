@@ -3,21 +3,6 @@ import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, viewportOnce } from '@/lib/animations';
 import { useTranslation } from '@/hooks/useTranslation';
 
-const roles = [
-  {
-    eyebrow: 'Orquestación',
-    titleKey: 0,
-  },
-  {
-    eyebrow: 'Generación',
-    titleKey: 1,
-  },
-  {
-    eyebrow: 'Razonamiento',
-    titleKey: 2,
-  },
-];
-
 export function AiFirstEngineering() {
   const t = useTranslation();
 
@@ -39,7 +24,7 @@ export function AiFirstEngineering() {
             variants={fadeInUp}
             className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--accent)]"
           >
-            AI-First Engineering
+            {t.aiFirst.eyebrow}
           </motion.p>
           <motion.h2
             variants={fadeInUp}
@@ -63,27 +48,24 @@ export function AiFirstEngineering() {
           viewport={viewportOnce}
           variants={staggerContainer}
         >
-          {roles.map((role, index) => {
-            const item = t.aiFirst.roles[index]!;
-            return (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                data-od-id={`ai-role-${index}`}
-                className="rounded-xl border border-structural bg-surface p-8 transition-colors hover:border-[var(--accent)]"
-              >
-                <p className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--accent)]">
-                  {role.eyebrow}
-                </p>
-                <h3 className="mt-3 text-xl font-semibold tracking-[-0.01em] text-[var(--fg)]">
-                  {item.title}
-                </h3>
-                <p className="mt-3 leading-relaxed text-[var(--muted)]">
-                  {item.description}
-                </p>
-              </motion.div>
-            );
-          })}
+          {t.aiFirst.roles.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={fadeInUp}
+              data-od-id={`ai-role-${index}`}
+              className="rounded-xl border border-structural bg-surface p-8 transition-colors hover:border-[var(--accent)]"
+            >
+              <p className="font-mono text-xs uppercase tracking-[0.12em] text-[var(--accent)]">
+                {item.eyebrow}
+              </p>
+              <h3 className="mt-3 text-xl font-semibold tracking-[-0.01em] text-[var(--fg)]">
+                {item.title}
+              </h3>
+              <p className="mt-3 leading-relaxed text-[var(--muted)]">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

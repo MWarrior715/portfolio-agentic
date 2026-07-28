@@ -46,6 +46,8 @@ export interface QuikliiData {
   stack: string[];
   layers: QuikliiLayer[];
   metrics: QuikliiMetric[];
+  /** Etapas del flujo de pedido mostradas en el diagrama. */
+  flowSteps: string[];
   architectureCode: string;
 }
 
