@@ -114,7 +114,7 @@ export function QuikliiCaseStudy() {
 
           <motion.div
             variants={fadeInUp}
-            className="rounded-xl border border-structural bg-[var(--bg)] p-6"
+            className="overflow-hidden rounded-xl border border-structural bg-[var(--bg)] p-6"
             data-od-id="quiklii-diagram"
           >
             <QuikliiFlowDiagram steps={flowSteps} />
@@ -126,27 +126,46 @@ export function QuikliiCaseStudy() {
 }
 
 function QuikliiFlowDiagram({ steps }: { steps: string[] }) {
+  const row1 = steps.slice(0, 3);
+  const row2 = steps.slice(3);
+
   return (
-    <div className="relative">
-      <div className="flex snap-x gap-2 overflow-x-auto pb-3 sm:grid sm:grid-cols-5 sm:gap-3 sm:overflow-visible sm:pb-0">
-        {steps.map((step, index) => (
-          <div
-            key={index}
-            className="flex snap-center items-center gap-2 last:mr-0 sm:last:mr-0"
-          >
-            <div className="min-w-[84px] rounded-lg border border-structural bg-surface px-3 py-2.5 text-center sm:w-full sm:min-w-0">
-              <span className="block text-[10px] font-medium uppercase tracking-wider text-[var(--muted)] sm:hidden">
-                Paso {index + 1}
-              </span>
-              <span className="block font-mono text-xs text-[var(--fg)]">{step}</span>
-            </div>
-            {index < steps.length - 1 && (
-              <span className="shrink-0 text-[var(--accent)]">→</span>
-            )}
+    <div className="space-y-2 sm:grid sm:grid-cols-5 sm:gap-3 sm:space-y-0">
+      {[
+        { items: row1, showArrowAfterLast: true },
+        { items: row2, showArrowAfterLast: false },
+      ].map((row, rowIndex) => (
+        <div key={rowIndex} className="flex items-center justify-center gap-2 sm:hidden">
+          {row.items.map((step, index) => {
+            const globalIndex = rowIndex === 0 ? index : index + 3;
+            return (
+              <div key={globalIndex} className="flex items-center gap-2">
+                <div className="min-w-[88px] rounded-md border border-structural bg-surface px-2 py-2 text-center">
+                  <span className="block text-[9px] font-medium uppercase tracking-wider text-[var(--muted)]">
+                    Paso {globalIndex + 1}
+                  </span>
+                  <span className="block font-mono text-[10px] leading-tight text-[var(--fg)]">{step}</span>
+                </div>
+                {(index < row.items.length - 1 || row.showArrowAfterLast) && (
+                  <span className="shrink-0 text-xs text-[var(--accent)]">→</span>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      ))}
+
+      {/* Desktop: single row */}
+      {steps.map((step, index) => (
+        <div key={`desktop-${index}`} className="hidden items-center gap-3 sm:flex">
+          <div className="flex-1 rounded-lg border border-structural bg-surface px-3 py-2.5 text-center">
+            <span className="block font-mono text-xs text-[var(--fg)]">{step}</span>
           </div>
-        ))}
-      </div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-[var(--bg)] to-transparent sm:hidden" />
+          {index < steps.length - 1 && (
+            <span className="shrink-0 text-[var(--accent)]">→</span>
+          )}
+        </div>
+      ))}
     </div>
   );
 }
