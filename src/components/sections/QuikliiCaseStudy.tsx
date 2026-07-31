@@ -127,20 +127,26 @@ export function QuikliiCaseStudy() {
 
 function QuikliiFlowDiagram({ steps }: { steps: string[] }) {
   return (
-    <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-      {steps.map((step, index) => (
-        <div key={index} className="flex items-center gap-3">
-          <div className="flex-1 rounded-lg border border-structural bg-surface p-3 text-center">
-            <span className="font-mono text-xs text-[var(--fg)]">{step}</span>
+    <div className="relative">
+      <div className="flex snap-x gap-2 overflow-x-auto pb-3 sm:grid sm:grid-cols-5 sm:gap-3 sm:overflow-visible sm:pb-0">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className="flex snap-center items-center gap-2 last:mr-0 sm:last:mr-0"
+          >
+            <div className="min-w-[84px] rounded-lg border border-structural bg-surface px-3 py-2.5 text-center sm:w-full sm:min-w-0">
+              <span className="block text-[10px] font-medium uppercase tracking-wider text-[var(--muted)] sm:hidden">
+                Paso {index + 1}
+              </span>
+              <span className="block font-mono text-xs text-[var(--fg)]">{step}</span>
+            </div>
+            {index < steps.length - 1 && (
+              <span className="shrink-0 text-[var(--accent)]">→</span>
+            )}
           </div>
-          {index < steps.length - 1 && (
-            <span className="hidden text-[var(--accent)] sm:inline">→</span>
-          )}
-          {index < steps.length - 1 && (
-            <span className="text-center text-[var(--accent)] sm:hidden">↓</span>
-          )}
-        </div>
-      ))}
+        ))}
+      </div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-[var(--bg)] to-transparent sm:hidden" />
     </div>
   );
 }
