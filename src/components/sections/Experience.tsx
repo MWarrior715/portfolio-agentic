@@ -19,7 +19,7 @@ export function Experience() {
       <div className="mx-auto max-w-4xl">
         <motion.div
           className="mb-16 max-w-3xl"
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
@@ -47,7 +47,7 @@ export function Experience() {
 
         <motion.ul
           className="grid gap-6 sm:grid-cols-2"
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}

@@ -20,7 +20,7 @@ export function QuikliiCaseStudy() {
       <div className="mx-auto max-w-7xl">
         <motion.div
           className="mb-12 max-w-3xl"
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
@@ -47,8 +47,8 @@ export function QuikliiCaseStudy() {
         </motion.div>
 
         <motion.div
-          className="mb-16 grid grid-cols-2 gap-4 sm:grid-cols-4"
-          initial="hidden"
+          className="mb-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
@@ -70,7 +70,7 @@ export function QuikliiCaseStudy() {
 
         <motion.div
           className="grid gap-6 lg:grid-cols-3"
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
@@ -82,7 +82,7 @@ export function QuikliiCaseStudy() {
 
         <motion.div
           className="mt-16 grid gap-8 lg:grid-cols-2"
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}

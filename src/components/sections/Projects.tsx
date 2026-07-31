@@ -20,7 +20,7 @@ export function Projects() {
       <div className="mx-auto max-w-7xl">
         <motion.div
           className="mb-16 max-w-3xl"
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
@@ -48,7 +48,7 @@ export function Projects() {
 
         <motion.div
           className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3"
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}

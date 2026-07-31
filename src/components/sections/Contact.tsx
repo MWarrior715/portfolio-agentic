@@ -20,7 +20,7 @@ export function Contact() {
       <div className="mx-auto max-w-5xl">
         <motion.div
           className="mb-12 max-w-3xl"
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
@@ -48,7 +48,7 @@ export function Contact() {
 
         <motion.div
           className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}
@@ -60,7 +60,7 @@ export function Contact() {
 
         <motion.div
           className="mt-12"
-          initial="hidden"
+          initial={false}
           whileInView="visible"
           viewport={viewportOnce}
           variants={staggerContainer}

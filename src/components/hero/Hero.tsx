@@ -14,14 +14,14 @@ export function Hero() {
     <section
       id="inicio"
       data-od-id="hero"
-      className="flex min-h-[calc(100vh-72px)] items-center bg-[var(--bg)] px-4 sm:px-6 lg:px-8"
+      className="flex min-h-0 items-center bg-[var(--bg)] px-4 py-16 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-72px)] lg:px-8 lg:py-24"
     >
-      <div className="mx-auto grid w-full max-w-7xl items-center gap-16 py-20 lg:grid-cols-2">
+      <div className="mx-auto grid w-full max-w-7xl items-center gap-10 py-0 sm:gap-12 lg:grid-cols-2 lg:gap-16">
         <motion.div
-          initial="hidden"
+          initial={false}
           animate="visible"
           variants={staggerContainer}
-          className="max-w-2xl"
+          className="min-w-0 max-w-2xl"
         >
           <motion.p
             variants={fadeInUp}
@@ -32,7 +32,7 @@ export function Hero() {
 
           <motion.h1
             variants={fadeInUp}
-            className="font-display mt-5 text-5xl font-semibold leading-[0.95] tracking-[-0.02em] text-[var(--fg)] sm:text-6xl md:text-7xl"
+            className="font-display mt-4 max-w-full break-words text-4xl font-semibold leading-[0.95] tracking-[-0.02em] text-[var(--fg)] sm:text-5xl md:text-6xl lg:text-7xl"
           >
             {t.hero.titleLine1}
             <span className="text-[var(--muted)]"> {t.hero.titleSep} </span>
@@ -41,14 +41,14 @@ export function Hero() {
 
           <motion.p
             variants={fadeInUp}
-            className="mt-8 max-w-xl text-lg leading-relaxed text-[var(--muted)]"
+            className="mt-5 max-w-xl break-words text-base leading-relaxed text-[var(--muted)] sm:text-lg sm:mt-6 lg:mt-8"
           >
             {t.hero.subtitle}
           </motion.p>
 
           <motion.div
             variants={fadeInUp}
-            className="mt-10 flex flex-col items-start gap-4 sm:flex-row"
+            className="mt-6 flex flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:items-start sm:gap-4 lg:mt-10"
           >
             <a
               href="#proyectos"
@@ -72,6 +72,7 @@ export function Hero() {
           animate="visible"
           variants={fadeInRight}
           data-od-id="hero-terminal"
+          className="min-w-0"
         >
           <CodeTypewriter code={quikliiData[lang].architectureCode} typingSpeed={18} />
         </motion.div>
