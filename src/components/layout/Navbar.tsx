@@ -40,7 +40,7 @@ export function Navbar() {
           href="#inicio"
           className="font-display text-xl font-semibold tracking-[-0.02em] text-[var(--fg)]"
         >
-          MGuerrero
+          Manuel Guerrero
         </a>
 
         <div className="hidden items-center gap-6 md:flex">
@@ -64,11 +64,10 @@ export function Navbar() {
                 type="button"
                 aria-pressed={lang === option}
                 onClick={() => setLang(option)}
-                className={`rounded-md px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-[0.06em] transition-colors ${
-                  lang === option
+                className={`rounded-md px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-[0.06em] transition-colors ${lang === option
                     ? 'bg-surface-raised text-[var(--accent)]'
                     : 'text-[var(--muted)] hover:text-[var(--fg)]'
-                }`}
+                  }`}
               >
                 {option}
               </button>
@@ -121,11 +120,10 @@ export function Navbar() {
                   type="button"
                   aria-pressed={lang === option}
                   onClick={() => setLang(option)}
-                  className={`rounded-md px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-[0.06em] transition-colors ${
-                    lang === option
+                  className={`rounded-md px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-[0.06em] transition-colors ${lang === option
                       ? 'bg-surface-raised text-[var(--accent)]'
                       : 'text-[var(--muted)] hover:text-[var(--fg)]'
-                  }`}
+                    }`}
                 >
                   {option}
                 </button>
