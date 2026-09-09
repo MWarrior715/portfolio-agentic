@@ -25,6 +25,15 @@ const es = {
       'Reduzco la distancia entre una idea compleja y un producto funcional. Conecto desarrollo, inteligencia artificial, automatización y estrategia de negocio.',
     ctaProjects: 'Ver Proyectos',
     ctaContact: 'Contactar',
+    network: {
+      negocio: 'Negocio',
+      personas: 'Personas',
+      territorio: 'Territorio',
+      integrador: 'Integrador',
+      rag: 'RAG',
+      agentesIa: 'Agentes IA',
+      automatizacion: 'Automatización',
+    },
   },
   aiFirst: {
     eyebrow: 'METODOLOGÍA',
@@ -88,6 +97,7 @@ const es = {
     subtitle:
       'Quiero aportar al desarrollo de productos, integración de sistemas y oportunidades laborales.',
     cta: 'Escríbeme directamente',
+    portraitAlt: 'Retrato de Manuel Guerrero',
   },
 };
 
@@ -114,6 +124,15 @@ const en: typeof es = {
       'I close the gap between a complex idea and a working product. I connect development, AI, automation, and business strategy.',
     ctaProjects: 'View Projects',
     ctaContact: 'Contact',
+    network: {
+      negocio: 'Business',
+      personas: 'People',
+      territorio: 'Territory',
+      integrador: 'Integrator',
+      rag: 'RAG',
+      agentesIa: 'AI Agents',
+      automatizacion: 'Automation',
+    },
   },
   aiFirst: {
     eyebrow: 'METHODOLOGY',
@@ -177,6 +196,7 @@ const en: typeof es = {
     subtitle:
       'I want to contribute to product development, systems integration, and job opportunities.',
     cta: 'Email me directly',
+    portraitAlt: 'Portrait of Manuel Guerrero',
   },
 };
 

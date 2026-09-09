@@ -1,6 +1,7 @@
 // Portafolio agéntico · AI Product Builder
 import { motion } from 'framer-motion';
 import { CodeTypewriter } from './CodeTypewriter';
+import { NetworkGraph } from './NetworkGraph';
 import { fadeInRight, fadeInUp, staggerContainer } from '@/lib/animations';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useLanguageStore } from '@/store/useLanguageStore';
@@ -14,9 +15,12 @@ export function Hero() {
     <section
       id="inicio"
       data-od-id="hero"
-      className="flex min-h-0 items-center bg-[var(--bg)] px-4 py-16 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-72px)] lg:px-8 lg:py-24"
+      className="relative flex min-h-0 items-center overflow-hidden bg-[var(--bg)] px-4 py-16 sm:px-6 sm:py-20 lg:min-h-[calc(100vh-72px)] lg:px-8 lg:py-24"
     >
-      <div className="mx-auto grid w-full max-w-7xl items-center gap-10 py-0 sm:gap-12 lg:grid-cols-2 lg:gap-16">
+      {/* Grafo de red decorativo (versión viva del banner) — mitad derecha */}
+      <NetworkGraph className="pointer-events-none absolute left-1/2 top-1/2 hidden w-[560px] -translate-y-1/2 opacity-30 lg:block xl:w-[680px] 2xl:w-[820px]" />
+
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-10 py-0 sm:gap-12 lg:grid-cols-2 lg:gap-16 2xl:max-w-[94rem] 2xl:gap-20">
         <motion.div
           initial={false}
           animate="visible"
@@ -72,8 +76,17 @@ export function Hero() {
           animate="visible"
           variants={fadeInRight}
           data-od-id="hero-terminal"
-          className="min-w-0"
+          className="relative min-w-0"
         >
+          {/* Resplandores anclados al terminal: le dan al vidrio esmerilado algo que difuminar */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-10 -top-14 h-72 w-80 rounded-full bg-[oklch(75%_0.14_65/0.35)] blur-3xl"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -bottom-16 -left-12 h-80 w-96 rounded-full bg-[oklch(68%_0.18_165/0.30)] blur-3xl"
+          />
           <CodeTypewriter code={quikliiData[lang].architectureCode} typingSpeed={18} />
         </motion.div>
       </div>

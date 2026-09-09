@@ -32,7 +32,7 @@ export function CodeTypewriter({
 
   return (
     <div
-      className={`max-w-full overflow-hidden rounded-xl border border-structural bg-[var(--surface)] shadow-2xl ${className}`}
+      className={`max-w-full overflow-hidden rounded-xl border border-structural bg-[var(--surface)]/10 shadow-2xl backdrop-blur-[2px] ${className}`}
       data-od-id="code-terminal"
     >
       <div className="flex items-center gap-2 border-b border-structural px-3 py-2 sm:px-4 sm:py-3">
