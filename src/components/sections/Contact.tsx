@@ -52,8 +52,8 @@ export function Contact() {
             variants={scaleIn}
             src={contactPortrait}
             alt={t.contact.portraitAlt}
-            width={563}
-            height={512}
+            width={576}
+            height={768}
             loading="lazy"
             decoding="async"
             className="mx-auto w-44 max-w-full object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_82%,transparent)] sm:w-52 lg:w-64"
