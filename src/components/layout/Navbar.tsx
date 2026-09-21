@@ -33,7 +33,7 @@ export function Navbar() {
   return (
     <header
       data-od-id="navbar"
-      className="sticky top-0 z-50 border-b border-structural bg-[var(--bg)]/80 backdrop-blur-md"
+      className="sticky top-0 z-50 border-b border-structural bg-[var(--bg)]/80 backdrop-blur-md md:static"
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a

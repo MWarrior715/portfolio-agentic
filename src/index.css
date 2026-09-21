@@ -43,6 +43,9 @@ html {
   background-color: var(--bg);
   color: var(--fg);
   overflow-x: hidden;
+  /* clip recorta el overflow sin crear contenedor de scroll (a diferencia de
+     hidden), lo que permite que position: sticky funcione en descendientes. */
+  overflow-x: clip;
 }
 
 body {
@@ -52,6 +55,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 code,

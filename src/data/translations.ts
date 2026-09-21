@@ -16,6 +16,11 @@ const es = {
     langEs: 'ES',
     langEn: 'EN',
   },
+  dock: {
+    ariaLabel: 'Navegación rápida',
+    langEs: 'Cambiar a español',
+    langEn: 'Cambiar a inglés',
+  },
   hero: {
     eyebrow: 'Perfil Profesional',
     titleLine1: 'AI Product Builder',
@@ -114,6 +119,11 @@ const en: typeof es = {
     themeToDark: 'Switch to dark mode',
     langEs: 'ES',
     langEn: 'EN',
+  },
+  dock: {
+    ariaLabel: 'Quick navigation',
+    langEs: 'Switch to Spanish',
+    langEn: 'Switch to English',
   },
   hero: {
     eyebrow: 'Professional Profile',

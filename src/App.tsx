@@ -1,5 +1,6 @@
 // Portafolio agéntico · AI Product Builder
 import { Navbar } from '@/components/layout/Navbar';
+import { ScrollDock } from '@/components/layout/ScrollDock';
 import { Hero } from '@/components/hero/Hero';
 import { AiFirstEngineering } from '@/components/sections/AiFirstEngineering';
 import { Projects } from '@/components/sections/Projects';
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
       <Navbar />
+      <ScrollDock />
 
       <main>
         <Hero />
