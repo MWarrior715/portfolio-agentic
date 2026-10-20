@@ -36,6 +36,13 @@ export const contactData: Localized<ContactItem[]> = {
       icon: 'github',
     },
     {
+      id: 'linkedin',
+      label: 'LinkedIn',
+      value: 'in/manuel-guerrero-medina',
+      href: 'https://www.linkedin.com/in/manuel-guerrero-medina/',
+      icon: 'linkedin',
+    },
+    {
       id: 'location',
       label: 'Ubicación',
       value: 'Bogotá, Colombia',
@@ -77,6 +84,13 @@ export const contactData: Localized<ContactItem[]> = {
       value: 'github.com/MWarrior715',
       href: 'https://github.com/MWarrior715',
       icon: 'github',
+    },
+    {
+      id: 'linkedin',
+      label: 'LinkedIn',
+      value: 'in/manuel-guerrero-medina',
+      href: 'https://www.linkedin.com/in/manuel-guerrero-medina/',
+      icon: 'linkedin',
     },
     {
       id: 'location',

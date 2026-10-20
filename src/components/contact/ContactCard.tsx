@@ -5,6 +5,7 @@ import { type ComponentType } from 'react';
 import { Languages, Mail, MapPin, Phone } from 'lucide-react';
 import { type ContactIcon, type ContactItem } from '@/types';
 import { GitHubIcon } from '@/components/ui/GitHubIcon';
+import { LinkedInIcon } from '@/components/ui/LinkedInIcon';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 
 interface ContactCardProps {
@@ -17,6 +18,7 @@ const iconMap: Record<ContactIcon, ComponentType<{ className?: string }>> = {
   phone: Phone,
   whatsapp: WhatsAppIcon,
   github: GitHubIcon,
+  linkedin: LinkedInIcon,
   map: MapPin,
   languages: Languages,
 };

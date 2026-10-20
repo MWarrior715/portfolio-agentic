@@ -65,7 +65,7 @@ export interface ExperienceItem {
 }
 
 /** Íconos disponibles para un canal de contacto. */
-export type ContactIcon = 'mail' | 'phone' | 'whatsapp' | 'github' | 'map' | 'languages';
+export type ContactIcon = 'mail' | 'phone' | 'whatsapp' | 'github' | 'linkedin' | 'map' | 'languages';
 
 /** Canal de contacto (dato real extraído del old-portfolio). */
 export interface ContactItem {

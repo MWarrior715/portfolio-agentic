@@ -1,5 +1,6 @@
 // Portafolio agéntico · AI Product Builder
 import { GitHubIcon } from '@/components/ui/GitHubIcon';
+import { LinkedInIcon } from '@/components/ui/LinkedInIcon';
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -13,16 +14,28 @@ export function Footer() {
         <p className="font-mono text-xs text-[var(--muted)]">
           © {year} Manuel Guerrero. AI Product Builder.
         </p>
-        <a
-          href="https://github.com/MWarrior715"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          className="inline-flex items-center gap-2 text-sm text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
-        >
-          <GitHubIcon className="h-4 w-4" />
-          github.com/MWarrior715
-        </a>
+        <div className="flex items-center justify-center gap-6">
+          <a
+            href="https://github.com/MWarrior715"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="inline-flex items-center gap-2 text-sm text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
+          >
+            <GitHubIcon className="h-4 w-4" />
+            github.com/MWarrior715
+          </a>
+          <a
+            href="https://www.linkedin.com/in/manuel-guerrero-medina/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="inline-flex items-center gap-2 text-sm text-[var(--muted)] transition-colors hover:text-[var(--accent)]"
+          >
+            <LinkedInIcon className="h-4 w-4" />
+            linkedin.com/in/manuel-guerrero-medina
+          </a>
+        </div>
       </div>
     </footer>
   );
